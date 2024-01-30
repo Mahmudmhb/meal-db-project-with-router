@@ -1,0 +1,19 @@
+.navber a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+.navber a:hover{
+    background-color: blue;
+    font-size: 20px;
+    animation-duration:inherit;
+
+}
+
+.navber-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #23180d;
+    padding: 20px;
+    align-items: center;
+}
