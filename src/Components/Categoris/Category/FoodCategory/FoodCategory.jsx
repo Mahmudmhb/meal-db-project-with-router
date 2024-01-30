@@ -1,7 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const FoodCategory = ({category}) => {
+    const navigate = useNavigate()
+    const goBack =()=>{
+        navigate(-1)
+    }
     // console.log(category)
     const {idCategory,strCategory, strCategoryThumb,strCategoryDescription} = category;
     return (
@@ -10,6 +14,7 @@ const FoodCategory = ({category}) => {
            <img src={strCategoryThumb} alt="" />
             <h3>{strCategory}</h3>
            </Link>
+           <button onClick={goBack}> Go Back</button>
         </div>
     );
 };

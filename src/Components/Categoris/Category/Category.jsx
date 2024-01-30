@@ -9,7 +9,7 @@ const Category = () => {
     return (
         <div>
             <h2>total category : {categories.length}</h2>
-            <div style={{display:"grid", gridTemplateColumns:"repeat(3, 1fr) ", gap:'10px'}}>
+            <div style={{display:"grid", gridTemplateColumns:"repeat(3, 1fr) ", gap:'10px', margin:'20px'}}>
                 {
                     categories.map(category => <FoodCategory key={category.idCategory} category= {category}></FoodCategory>)
                 }

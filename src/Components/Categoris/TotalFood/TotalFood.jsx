@@ -1,8 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const TotalFood = ({food}) => {
-    console.log(food)
+    const navigate = useNavigate()
+    const goBack =()=>{
+        navigate(-1)
+    }
+    // console.log(food)
     const {strArea,strMeal,strCategory,strIngredient2, idMeal, strInstructions, strMealThumb, strTags} = food
     return (
         <div style={{border: '2px solid red', borderRadius: '10px',  padding:'10px', textAlign:"center"}}>
@@ -11,6 +15,7 @@ const TotalFood = ({food}) => {
             <h3>{strMeal}</h3>
             {/* <p>{strInstructions}</p> */}
             <h2><Link to={`/meals/${idMeal}`}>See more details</Link></h2>
+            <button onClick={goBack}> Go Back</button>
 
         </div>
     );
