@@ -5,7 +5,7 @@ import FoodCategory from './FoodCategory/FoodCategory';
 const Category = () => {
     const data = useLoaderData()
     const categories = data.categories;
-    console.log(categories)
+    // console.log(categories)
     return (
         <div>
             <h2>total category : {categories.length}</h2>

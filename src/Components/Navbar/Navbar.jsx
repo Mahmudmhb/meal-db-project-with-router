@@ -12,7 +12,7 @@ const Navber = () => {
                 <div className='navber'>
                     <Link to="/">home</Link>
                     <Link to="/about">About</Link>
-                    <Link to="/categoris">Categoris</Link>
+                    <Link to="/categories">Categories</Link>
                     <Link to="/meals"> Meals</Link>
                     <Link to="/contact">Contact</Link>
                 </div>
