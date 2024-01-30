@@ -4,7 +4,10 @@ import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 const MealDetails = () => {
     const meal = useLoaderData();
     const navigate = useNavigate()
-    navigate(-1)
+    const goBackTOPage =()=>{
+
+        navigate(-1)
+    }
     console.log(meal.meals)
     const {strMeal,strMealThumb, idMeal,strInstructions,strArea,strTags} = meal.meals[0];
     return (
@@ -16,7 +19,7 @@ const MealDetails = () => {
             <h3>{strTags}</h3>
             <p>{strInstructions}</p>
             {/* <h2><Link to={`/meals/${idMeal}`}>See more details</Link></h2> */}
-            <button onClick={(navigate)}> Go Back</button>
+            <button style={{background:'blue' , padding:'10px', color:"white" , borderRadius:'10px', fontSize:'20px'}} onClick={(goBackTOPage)}> Go Back</button>
 
         </div>
     );

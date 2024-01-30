@@ -12,6 +12,7 @@ import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Meals from './Components/Meals/Meals';
 import MealDetails from './Components/MealDetails/MealDetails';
+import Category from './Components/Categoris/Category/Category';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
       {
         path:'/contact',
         element: <Contact></Contact>
+      },
+      {
+        path:'/categoris',
+        element:<Category></Category>,
+        loader:()=> fetch('https://www.themealdb.com/api/json/v1/1/categories.php'),
       },
       {
         path: '/meals/:mealId',
